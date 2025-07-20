@@ -1,0 +1,59 @@
+/* .MeetupDiscussion_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.MeetupDiscussion_image {
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
+.MeetupDiscussion_image_img {
+    height: 50vh;
+    width: 100%;
+}
+
+.MeetupDiscussion_text {
+    color: #fff;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+} */
+
+.Feedback_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.Feedback_image {
+    width: 80vw;
+    margin-bottom: 15px;
+}
+
+.Feedback_image_img {
+    height: 50vh;
+    width: 100%;
+}
+
+.Feedback_textt {
+    color: #000;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.Feedback_categories button {
+    margin-top: 20px;
+}

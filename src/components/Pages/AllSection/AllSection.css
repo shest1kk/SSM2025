@@ -1,0 +1,34 @@
+.categories_text {
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 22px;
+    color: #000;
+    font-weight: bold;
+}
+
+
+.categories_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+}
+
+.categories_button button {
+    margin-top: 20px;
+}
+
+.categories_image {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    /* margin-bottom: 15px; */
+}
+
+.categories_image_img {
+    height: 30vh;
+    width: 60%;
+}

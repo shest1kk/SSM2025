@@ -1,0 +1,114 @@
+.FaqAbout_wrapper {
+    display: flex;
+
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBE1;
+}
+
+.FaqAbout_image {
+    display: flex;
+    font-size: 52px;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: #82D7E1;
+    
+}
+
+.FaqAbout_image_img {
+    height: 20vh;
+    width: 30vw;
+    margin-bottom: 25px;
+
+}
+
+.FaqAbout_text {
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #EBEBE1;
+
+
+}
+
+.details-back {
+    font-size: 18px;
+}
+
+.details-blue {
+    color: #82D7E1;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.details {
+    color: #F05A23;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.FaqAbout_text_Eating,
+.FaqAbout_text_Gym,
+.FaqAbout_text_Games,
+.FaqAbout_text_show,
+.FaqAbout_text_streams,
+.FaqAbout_text_parking,
+.FaqAbout_text_bbq,
+.FaqAbout_text_wifi {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 7vw;
+    margin-top: 10px;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 500;
+    width: 95%;
+}
+
+.FaqAbout-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.FaqAbout_text_wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    flex-direction: column;
+    /* margin-top: 10vh; */
+}
+
+.FaqAbout_headerText {
+    padding-top: 20px;
+}
+
+.FaqAbout_text_streams span {
+    color: #3C73BE;
+}
+
+.details-timing {
+    margin-top: 20px;
+    font-size: 26px;
+    margin-left: auto;
+    margin-right: auto;
+}

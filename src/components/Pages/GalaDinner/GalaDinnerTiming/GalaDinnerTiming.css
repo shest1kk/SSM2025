@@ -1,0 +1,27 @@
+.GalaDinnerTiming_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.GalaDinnerTiming_image {
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
+.GalaDinnerTiming_image_img {
+    height: 50vh;
+    width: 100%;
+}
+
+.GalaDinnerTiming_text {
+    color: #fff;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+}

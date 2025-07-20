@@ -1,0 +1,80 @@
+.GalaDinnerDresscode_wrapper {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBE1;
+}
+
+.GalaDinnerDresscode_headerText{
+    padding-top: 20px;
+}
+
+.GalaDinnerDresscode_image {
+    display: flex;
+    font-size: 52px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: #82D7E1;
+}
+
+.GalaDinnerDresscode_image_img {
+    height: 20vh;
+    width: 30vw;
+}
+
+.GalaDinnerDresscode_text {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #EBEBE1;
+    width: 100vw;
+    margin-top: 5vh;
+}
+
+.GalaDinnerDresscode_text_girls,
+.GalaDinnerDresscode_text_mans,
+.GalaDinnerDresscode_text_no,
+.GalaDinnerDresscode_text_yes {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 7vw;
+    margin-top: 10px;
+}
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 20px;
+    font-weight: 500;
+    width: 95%;
+}
+
+.GalaDinnerDresscode-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.GalaDinnerDresscode_text_wrapper {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    flex-direction: column;
+    /* margin-top: 10vh; */
+}

@@ -1,0 +1,162 @@
+.GalaDinnerSit_wrapper {
+    display: flex;
+
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EBEBE1;
+}
+
+.GalaDinnerSit_headerText {
+    padding-top: 20px;
+}
+
+.GalaDinnerSit_image {
+    display: flex;
+    font-size: 52px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 20vh;
+    background-color: #82D7E1;
+}
+
+.GalaDinnerSit_image_img {
+    height: 20vh;
+    width: 30vw;
+    margin-bottom: 25px;
+}
+
+.GalaDinnerSit_text {
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #EBEBE1;
+    width: 100vw;
+}
+
+.GalaDinnerSit_text th {
+    border: 1px double #000;
+            text-align: center; /* Горизонтальное центрирование */
+            vertical-align: middle; /* Вертикальное центрирование */
+            height: 50px;
+            padding: 20px;
+}
+
+.GalaDinnerSit_text td {
+    border: 1px double #000;
+            text-align: center; /* Горизонтальное центрирование */
+            vertical-align: middle; /* Вертикальное центрирование */
+            height: 50px;
+            padding: 20px;
+}
+
+.GalaDinnerSit_text table {
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+/* 
+.GalaDinnerSit-button {
+    margin-bottom: 20px;
+    margin-top: 20px;
+} */
+
+.GalaDinnerSit_text .sticky-button {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: position 0.3s, bottom 0.3s;
+}
+
+/* Стили для обычного положения кнопки */
+.GalaDinnerSit_text .normal-button {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+}
+
+/* Отступ внизу страницы */
+.bottom-spacer {
+    height: 80px; /* Достаточный отступ для кнопки */
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: #82D7E1;
+    height: 5vh;
+    width: 42vh;
+}
+
+.search-input-container {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-button {
+    padding: 10px 20px;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 50vh;
+    right: calc(4.5% - 20px); /* Позиционируем по центру экрана по вертикали и смещаем вправо */
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10; /* Поверх других элементов */
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    background-color: #82D7E1;
+    border-radius: 25px;
+    padding: 2px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    opacity: .7;
+    
+}
+
+.scroll-to-top img {
+    width: 45px; /* Небольшой размер стрелки */
+    height: auto;
+    opacity: .7;
+}
+
+.highlighted {
+    background-color: #82D7E1;
+    scale: 1.1;
+    transition: scale 1s ease, background-color 1s ease;
+}
+
+tbody tr {
+    transition: scale 1s ease, background-color 1s ease;
+}
