@@ -4,28 +4,30 @@ import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
 
 const zones = [
-  {
-    id: 1,
-    name: "Ресторан",
-    description: "Здесь вы можете позавтракать, пообедать и поужинать.",
-    top: "35%",
-    left: "45%",
-  },
-  {
-    id: 2,
-    name: "Бассейн",
-    description: "Открытый бассейн для гостей отеля.",
-    top: "60%",
-    left: "70%",
-  },
-  {
-    id: 3,
-    name: "Ресепшн",
-    description: "Здесь вы можете получить любую справочную информацию.",
-    top: "20%",
-    left: "20%",
-  },
-];
+    { id: 1, name: "Детская площадка", top: "20%", left: "19%" },
+    { id: 2, name: "", description: "", top: "12%", left: "22%" },
+    { id: 3, name: "", description: "", top: "16%", left: "30%" },
+    { id: 4, name: "", description: "", top: "18%", left: "38%" },
+    { id: 5, name: "", description: "", top: "20%", left: "45%" },
+    { id: 6, name: "", description: "", top: "22%", left: "53%" },
+    { id: 7, name: "", description: "", top: "25%", left: "60%" },
+    { id: 8, name: "", description: "", top: "28%", left: "68%" },
+    { id: 9, name: "", description: "", top: "32%", left: "75%" },
+    { id: 10, name: "", description: "", top: "36%", left: "82%" },
+    { id: 11, name: "", description: "", top: "40%", left: "88%" },
+    { id: 12, name: "", description: "", top: "45%", left: "92%" },
+    { id: 13, name: "", description: "", top: "50%", left: "85%" },
+    { id: 14, name: "", description: "", top: "55%", left: "78%" },
+    { id: 15, name: "", description: "", top: "60%", left: "70%" },
+    { id: 16, name: "", description: "", top: "65%", left: "62%" },
+    { id: 17, name: "", description: "", top: "70%", left: "54%" },
+    { id: 18, name: "", description: "", top: "75%", left: "46%" },
+    { id: 19, name: "", description: "", top: "80%", left: "38%" },
+    { id: 20, name: "", description: "", top: "85%", left: "30%" },
+    { id: 21, name: "", description: "", top: "90%", left: "22%" },
+    { id: 22, name: "", description: "", top: "95%", left: "15%" },
+    { id: 23, name: "", description: "", top: "98%", left: "8%" },
+  ];
 
 const FaqMap = () => {
     const [activeZone, setActiveZone] = useState(null);
