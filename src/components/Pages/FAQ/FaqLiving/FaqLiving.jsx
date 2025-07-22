@@ -13,6 +13,7 @@ const FaqLiving = () => {
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const [showBackButton, setShowBackButton] = useState(true); // Состояние для видимости кнопки "Назад"
     const inputRef = useRef(null); // Ref для поля ввода
+    const [selectedDate, setSelectedDate] = useState(null); // null — ничего не выбрано
 
     // Формируем guestData автоматически, по два человека в каждом номере
     const people = {
@@ -197,6 +198,91 @@ const FaqLiving = () => {
         179: 'Михеева Елена',
     };
 
+    // Аналогично для 23 июля
+    const people23 = {
+        1: "Артемова Мария",
+        2: "Молдаванова Олеся",
+        3: "Белова Алена",
+        4: "---------",
+        5: "Болдырева Алия",
+        6: "Кабиева Диана",
+        7: "Бурыкина Анастасия",
+        8: "Садовская Екатерина",
+        9: "Дёмин Владислав",
+        10: "Мишкевич Эдуард",
+        11: "Волкова Галина",
+        12: "Волкова Елена",
+        13: "Дударева Оксана",
+        14: "Пескова Елизавета",
+        15: "Горбунова Ольга",
+        16: "Владыкина Диана",
+        17: "Егоров Александр",
+        18: "Горельков Александр",
+        19: "Елсаков Алексей",
+        20: "Лапшин Артём",
+        21: "Климова Ольга",
+        22: "Фербер Маргарита",
+        23: "Кокорская Ирина",
+        24: "Прокофьева Виктория",
+        25: "Копылова Екатерина",
+        26: "Шичкина Екатерина",
+        27: "Корнилова Екатерина",
+        28: "Круглова Юлия",
+        29: "Костенко Никита",
+        30: "Леваков Александр",
+        31: "Тункина Елена",
+        32: "Столярова Софья",
+        33: "Левченко Владимир",
+        34: "Медведев Александр",
+        35: "Леунин Александр",
+        36: "Попов Илья",
+        37: "Маслакова Инна",
+        38: "Москаленко Наталья",
+        39: "Минухина Евгения",
+        40: "Парчина Анастасия",
+        41: "Мокрова Анастасия",
+        42: "Подлегаева Дарья",
+        43: "Назарова Юлия",
+        44: "---------",
+        45: "Нилова Наталья",
+        46: "Котлярова Анжелика",
+        47: "Смирнова Анна",
+        48: "Сипягина Ирина",
+        49: "Канаева Мария",
+        50: "Пирогова Нина",
+        51: "Лебедев Дмитрий",
+        52: "Очкасов Николай",
+        53: "Мартина Елена",
+        54: "Красавина Екатерина",
+        55: "Анисимова Марина",
+        56: "Каплиева Марина",
+        57: "Семенин Михаил",
+        58: "Мусин Ринат",
+        59: "Коновалова Юлия",
+        60: "Гужвина Наталья",
+        61: "Заботкина Виктория",
+        62: "Виноградова Валентина",
+        63: "Романова Анастасия",
+        64: "Красавина Виктория",
+        65: "Маклакова Олеся",
+        66: "Михеева Елена",
+        67: "Сидорова Анастасия",
+        68: "Костерина Дарья",
+        69: "Кузин Михаил",
+        70: "Ситцов Евгений",
+        71: "Матвеев Евгений",
+        72: "Герасимов Владислав",
+        73: "Ануфриев Евгений",
+        74: "Сморода Роман",
+        75: "Салманова Диана",
+        78: "Тулина Мария",
+        79: "Гусейнов Рауф",
+        80: "Коненков Алексей",
+        81: "Мукашева Лилия",
+        82: "Мальцева Ирина",
+
+    };
+
     // Формируем guestData: каждый номер (id) содержит двух гостей (names)
     const guestData = [];
     const peopleKeys = Object.keys(people).map(Number).sort((a, b) => a - b);
@@ -207,6 +293,18 @@ const FaqLiving = () => {
         guestData.push({ id, names: [name1, name2] });
     }
 
+    // Формируем guests23 аналогично guestData
+    const guests23 = [];
+    const people23Keys = Object.keys(people23).map(Number).sort((a, b) => a - b);
+    for (let i = 0; i < people23Keys.length; i += 2) {
+        const id = (i / 2) + 1;
+        const name1 = people23[people23Keys[i]] || '';
+        const name2 = people23[people23Keys[i + 1]] || '';
+        guests23.push({ id, names: [name1, name2] });
+    }
+
+    const guests24 = guestData;
+    const guestsToShow = selectedDate === '23' ? guests23 : selectedDate === '24' ? guests24 : [];
 
 
      const scrollToRow = (row) => {
@@ -334,21 +432,51 @@ const FaqLiving = () => {
                         <FaSearch className="search-icon" onClick={handleSearch} />
                     </div>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Гость 1</th><th>Гость 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {guestData.map((guest) => (
-                            <tr key={guest.id} data-id={guest.id} className={highlightedRow == guest.id ? 'highlighted' : ''}>
-                                <td>{guest.names[0]}</td>
-                                <td>{guest.names[1]}</td>
+                {/* Блок с датами */}
+                <div style={{ display: 'flex', justifyContent: 'center', margin: '40px 0', fontSize: '20px', fontWeight: 'bold' }}>
+                    <div
+                        onClick={() => setSelectedDate('23')}
+                        style={{
+                            cursor: 'pointer',
+                            padding: '10px 20px',
+                            borderBottom: selectedDate === '23' ? '2px solid #ed1c29' : '2px solid transparent',
+                            color: selectedDate === '23' ? '#ed1c29' : '#000',
+                            marginRight: '20px',
+                            transition: 'all 0.2s',
+                        }}
+                    >
+                        23 июля
+                    </div>
+                    <div
+                        onClick={() => setSelectedDate('24')}
+                        style={{
+                            cursor: 'pointer',
+                            padding: '10px 20px',
+                            borderBottom: selectedDate === '24' ? '2px solid #ed1c29' : '2px solid transparent',
+                            color: selectedDate === '24' ? '#ed1c29' : '#000',
+                            transition: 'all 0.2s',
+                        }}
+                    >
+                        24 июля
+                    </div>
+                </div>
+                {selectedDate && (
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Гость 1</th><th>Гость 2</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {guestsToShow.map((guest) => (
+                                <tr key={guest.id} data-id={guest.id} className={highlightedRow == guest.id ? 'highlighted' : ''}>
+                                    <td>{guest.names[0]}</td>
+                                    <td>{guest.names[1]}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                )}
                 <div className={`scroll-to-top ${showScrollToTop ? 'show' : ''}`} onClick={scrollToTop}>
                     <img src="/assets/arrow-up.svg" alt="Scroll to Top" />
                 </div>

@@ -166,7 +166,7 @@
 }
 
 .highlighted {
-    background-color: #82D7E1;
+    background-color: #ed1c29;
     scale: 1.1;
     transition: scale 1s ease, background-color 1s ease;
 }
