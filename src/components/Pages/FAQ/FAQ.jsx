@@ -24,9 +24,9 @@ const FAQ = () => {
             <Link to='living'>
             <Button className={'primary-button'}>Проживание</Button>
             </Link>
-            <Link to='activnosti'>
+            {/* <Link to='activnosti'>
             <Button className={'primary-button'}>Активности</Button>
-            </Link>
+            </Link> */}
             <Link to='map'>
             <Button className={'primary-button'}>Территория отеля</Button>
             </Link>

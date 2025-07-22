@@ -27,7 +27,7 @@ const AllSection = () => {
             <Link to="/faq">
             <Button className={'primary-button'}>Общая информация</Button>
             </Link>
-            <Link to='/galadinner'>
+            {/* <Link to='/galadinner'>
             <Button className={'primary-button'}>Гала-ужин</Button>
             </Link>
             <Link to='/meetup'>
@@ -35,7 +35,7 @@ const AllSection = () => {
             </Link>
             <Link to='/feedback'>
             <Button className={'primary-button'}>Обратная связь</Button>
-            </Link>
+            </Link> */}
         
         </div>
         <div className="powered_by">
