@@ -2,6 +2,7 @@ import React from "react";
 import './FAQ.css';
 import Button from '../../Buttons/Button';
 import { Link } from "react-router-dom";
+import logo from '../../../assets/logo.png'
 const FAQ = () => {
     const handleClick = () => {
         alert('Скоро будет');
@@ -10,7 +11,7 @@ const FAQ = () => {
         <div className={'FAQ_wrapper'}>
         <div className={'FAQ_image'}>
         <img className={'Faq_image_img'}
-            src='/assets/logo.png'
+            src={logo}
             alt="123"
                 />
         </div>
