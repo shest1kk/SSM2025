@@ -10,7 +10,7 @@ const Meetup = () => {
         <div className={'Meetup_wrapper'}>
             <div className={'Meetup_image'}>
         <img className={'Meetup_image_img'}
-            src='/assets/logo.svg'
+            src='/assets/logo.png'
             alt="123"
                 />
         </div>
@@ -18,15 +18,15 @@ const Meetup = () => {
             <span>Конференция</span>
             </div>
         <div className={'Meetup_categories'}>
-            <Link to='timing'>
-            <Button className={'primary-button'}>AGENDA</Button>
+            <Link to='#'>
+            <Button onClick={handleClick} className={'primary-button'}>AGENDA</Button>
             </Link>
             {/* <Link to='speakers'> */}
             {/* <Button onClick={handleClick} className={'primary-button'}>Спикеры</Button> */}
             {/* </Link> */}
-            <Link to='discussion'>
+            {/* <Link to='discussion'>
             <Button className={'primary-button'}>Панельная дискуссия</Button>
-            </Link>
+            </Link> */}
             {/* <Link to='conception'> */}
             {/* <Button onClick={handleClick} className={'primary-button'}>Концепция</Button> */}
             {/* </Link> */}
@@ -34,6 +34,11 @@ const Meetup = () => {
             <Button className={'primary-button'}>Назад</Button>
             </Link>
         </div>
+        <div className="powered_by">
+                <a href="https://t.me/imdbll" target="_blank" rel="noopener noreferrer">
+                    powered by @imdbll
+                </a>
+            </div>
         </div>
     );
 };
