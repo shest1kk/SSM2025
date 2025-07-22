@@ -1,11 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../UI/Button";
 
 const FaqLiving = () => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [isSticky, setIsSticky] = useState(false);
+    const [isInputFocused, setIsInputFocused] = useState(false);
     const inputRef = useRef(null);
+    const [isSticky, setIsSticky] = useState(false);
+    const [showBackButton, setShowBackButton] = useState(true);
 
     const handleInputChange = (e) => {
         setSearchQuery(e.target.value);
@@ -18,34 +20,8 @@ const FaqLiving = () => {
         }
     };
 
-    const [showBackButton, setShowBackButton] = useState(true);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (inputRef.current && window.scrollY > 100) {
-                setIsSticky(true);
-            } else {
-                setIsSticky(false);
-            }
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-    useEffect(() => {
-        const handleResize = () => {
-            if (inputRef.current && window.innerWidth < 768) {
-                setShowBackButton(false);
-            } else {
-                setShowBackButton(true);
-            }
-        };
-
-        handleResize(); // Set initial value
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
+    // Оставляем только нужную логику sticky, если потребуется
+    // Можно добавить useEffect для sticky, если нужно
 
     return (
         <div className="faq-living-container">
