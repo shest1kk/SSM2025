@@ -28,21 +28,21 @@ const AppRoutes = () => {
           <Route path="/" element={<StartPageWithAnimation />} />
           <Route path="/sections" element={<AllSectionWithAnimation />} />
           <Route path="/faq" element={<FAQWithAnimation />} />
-          <Route path="/faq/about" element={<FaqAbout/>} />
-          <Route path="/faq/map" element={<FaqMap/>} />
-          <Route path="/gala/map" element={<FaqMapForGala />} />
-          <Route path="/faq/activnosti" element={<FaqActivnosti />} />
-          <Route path="/faq/living" element={<FaqLiving/>} />
+          <Route path="/faq/about" element={<FaqAboutWithAnimation />} />
+          <Route path="/faq/map" element={<FaqMapWithAnimation />} />
+          <Route path="/gala/map" element={<FaqMapForGalaWithAnimation />} />
+          <Route path="/faq/activnosti" element={<FaqActivnostiWithAnimation />} />
+          <Route path="/faq/living" element={<FaqLivingWithAnimation />} />
           <Route path="/galadinner" element={<GalaDinnerWithAnimation />} />
           <Route path="/galadinner/conception" element={<GalaDinnerConceptionWithAnimation />} />
-          <Route path="/galadinner/dresscode" element={<GalaDinnerDresscode/>} />
+          <Route path="/galadinner/dresscode" element={<GalaDinnerDresscodeWithAnimation />} />
           <Route path="/galadinner/timing" element={<GalaDinnerTimingWithAnimation />} />
-          <Route path="/gala/sit" element={<GalaDinnerSit />} />
+          <Route path="/gala/sit" element={<GalaDinnerSitWithAnimation />} />
           <Route path="/meetup" element={<MeetupWithAnimation />} />
           <Route path="/meetup/conception" element={<MeetupConceptionWithAnimation />} />
           <Route path="/meetup/discussion" element={<MeetupDiscussionWithAnimation />} />
           <Route path="/meetup/speakers" element={<MeetupSpeakersWithAnimation />} />
-          <Route path="/meetup/timing" element={<MeetupTiming />} />
+          <Route path="/meetup/timing" element={<MeetupTimingWithAnimation />} />
           <Route path="/feedback" element={<FeedbackWithAnimation />} />
         </Routes>
       </Router>
@@ -112,6 +112,14 @@ const AppRoutes = () => {
     return <AnimatedComponent keyName="faq-living"><FaqLiving /></AnimatedComponent>;
   };
   
+  const FaqActivnostiWithAnimation = () => {
+    return <AnimatedComponent keyName="faq-activnosti"><FaqActivnosti /></AnimatedComponent>;
+  };
+  
+  const FaqMapForGalaWithAnimation = () => {
+    return <AnimatedComponent keyName="faq-mapforgala"><FaqMapForGala /></AnimatedComponent>;
+  };
+  
   const GalaDinnerWithAnimation = () => {
     return <AnimatedComponent keyName="gala-dinner"><GalaDinner /></AnimatedComponent>;
   };
@@ -126,6 +134,10 @@ const AppRoutes = () => {
   
   const GalaDinnerTimingWithAnimation = () => {
     return <AnimatedComponent keyName="gala-dinner-timing"><GalaDinnerTiming /></AnimatedComponent>;
+  };
+  
+  const GalaDinnerSitWithAnimation = () => {
+    return <AnimatedComponent keyName="gala-dinner-sit"><GalaDinnerSit /></AnimatedComponent>;
   };
   
   const MeetupConceptionWithAnimation = () => {
