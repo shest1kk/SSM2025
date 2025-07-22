@@ -2,6 +2,8 @@ import React from "react";
 import './FaqAbout.css';
 import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
+import logo from '../../../../assets/logo.png';
+import sauna from '../../../../assets/emoji.png'
 
 const FaqAbout = () => {
     return (
@@ -13,65 +15,77 @@ const FaqAbout = () => {
                     alt='123'/>
                 </div>
                 <img className={'FaqAbout_image_img'}
-                    src='/assets/logo.svg'
+                    src={logo}
                     alt="123"
                 />
             </div>
             <div className={'FaqAbout_text'}>
                 <div className="FaqAbout_text_wrapper">
                 <div className="FaqAbout_text_Eating">
-                🍽️ Питание:
+                🍽️ Питание
                 <ul>
                     <li>завтрак</li>
                     <span className={'details'}>с 8:00 - 10:00</span>
                     <li>обед</li>
                     <span className={'details'}>с 13:00 - 15:00</span>
-                    <li>ужин 22.07</li>
-                    <span className={'details'}>с 18:00 - 21:00</span>
                 </ul>
                 </div>
-                {/* <div className="FaqAbout_text_Gym">
-                🏋 Тренажерный зал<br />
-                <span className={'details'}>круглосуточно</span>
-                </div>
-                <div className="FaqAbout_text_Games">
-                💪 Спортивные игры:
-                <ul>
-                    <li>Бильярд - американский пул с профессиональным маркером</li>
-                    <span className={'details'}>круглосуточно</span>
-                    <li>Настольный теннис</li>
-                    <li>Пляжный волейбол</li>
-                </ul>
-            </div> */}
-            <div className="FaqAbout_text_show">
-            🎭 Анимационные и шоу-программы
-            </div>
-            <div className="FaqAbout_text_streams">
-            🍿 Трансляция спортивных событий и кино
-            <ul>
-            <span className={'details'}>в спорт баре</span>
-            </ul>
-               
-            </div>
             <div className="FaqAbout_text_parking">
             🅿 Парковка
                 <ul>
                     <li>Парковка у КПП</li>
-                    <span className={"details-back"}>Въезд на территорию по ФИО</span>
-                    {/* <span className={'details-blue'}>кодовое слово Эй Кей/КФС/Эй Кей Раша</span>
-                    <span className={'details'}>первый час бесплатно, дальше 100р/час</span> */}
+                    <span className={"details-back"}>Вход на территорию по кодовому слову
+                    ЭйКей (ЭйКей Rostic`s)</span>
                 </ul>
             </div>
-            <div className="FaqAbout_text_bbq">
-            🔥 Мангальные площадки на территории
+            
+            <div className="FaqAbout_text_Sauna">
+                <div className="FaqAbout_sauna_title">
+                    <img src={sauna} alt="123" className="emojik" />
+                    <span>7 видов саун и бань</span>
+                </div>
                 <ul>
-                    <li>Уголь/дрова</li>
-                    <li>Розжиг</li>
-                    <li>Шампура/решетка</li>
-                    <span className={'details'}>перечисленные выше услуги оплачиваются отдельно</span>
+                    <li>Корейская сауна</li>
+                    <li>Сауна с розовой солью Сэнто</li>
+                    <li>Травяная сауна</li>
+                    <li>"Расул"</li>
+                    <li>Финская сауна с пихтой</li>
+                    <li>Инфракрасная кабина</li>
+                    <li>Сауна с галькой Фурако</li>
                 </ul>
-                
             </div>
+
+            <div className="FaqAbout_text_Sauna">
+                <div className="FaqAbout_sauna_title">
+                    <img src={sauna} alt="123" className="emojik" />
+                    <span>Панорамный бассейн</span>
+                </div>
+                <ul>
+                    <li>Крытый бассейн площадью 312 м² - идеальное место для уединения, перезагрузки и отдыха</li>
+                </ul>
+            </div>
+
+            <div className="FaqAbout_text_Sauna">
+                <div className="FaqAbout_sauna_title">
+                    <img src={sauna} alt="123" className="emojik" />
+                    <span>Эко-парк</span>
+                </div>
+                <ul>
+                    <li>На территории Отеля есть эко-парк, где можно покормить животных</li>
+                </ul>
+            </div>
+
+            <div className="FaqAbout_text_Sauna">
+                <div className="FaqAbout_sauna_title">
+                    <img src={sauna} alt="123" className="emojik" />
+                    <span>Теннисный корт и многое другое</span>
+                </div>
+                <ul>
+                    <li>Каждый сможет найти активности себе по душе</li>
+                </ul>
+            </div>
+
+
             <div className="FaqAbout_text_wifi">
             📶 Wi-Fi
             </div>

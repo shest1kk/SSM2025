@@ -2,21 +2,11 @@ import React from "react";
 import './FaqActivnosti.css';
 import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
+import logo from '../../../../assets/logo.png';
 
 const FaqActivnosti = () => {
     return (
         <div className={'FaqAbout_wrapper'}>
-            {/* <div className={'FaqAbout_image'}>
-                <div className="FaqAbout_headerText">
-                    <img classname={'FaqAbout_headerText_img'} 
-                    src='/assets/testimfonts.svg'
-                    alt='123'/>
-                </div>
-                <img className={'FaqAbout_image_img'}
-                    src='/assets/logo.svg'
-                    alt="123"
-                />
-            </div> */}
             <div className={'FaqAbout_text'}>
                 <div className="FaqAbout_text_wrapper">
                     <span className={'details-timing'}>❗<u>20:00 - 23:00</u>❗</span>
