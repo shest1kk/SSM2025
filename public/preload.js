@@ -1,14 +1,14 @@
 (function() {
     const imagesToPreload = [
         '/assets/hotel.jpg',
-        '/assets/logo.svg',
-        '/assets/FaqAbout_frame.svg',
+
         '/assets/living.svg',
         '/assets/test.svg',
         '/testimfonts.svg',
         '/assets/hotel.jpg',
         '/assets/logo.png',
-        
+        '/assets/emoji.png'
+
         // Добавьте остальные URL-адреса изображений
     ];
 

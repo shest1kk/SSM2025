@@ -2,7 +2,6 @@ import React from "react";
 import './FaqAbout.css';
 import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
-import sauna from '../../../../assets/emoji.png'
 
 const FaqAbout = () => {
     return (
@@ -40,7 +39,7 @@ const FaqAbout = () => {
             
             <div className="FaqAbout_text_Sauna">
                 <div className="FaqAbout_sauna_title">
-                    <img src={sauna} alt="123" className="emojik" />
+                    <img src="/assets/emoji.png" alt="123" className="emojik" />
                     <span>7 видов саун и бань</span>
                 </div>
                 <ul>
@@ -56,7 +55,7 @@ const FaqAbout = () => {
 
             <div className="FaqAbout_text_Sauna">
                 <div className="FaqAbout_sauna_title">
-                    <img src={sauna} alt="123" className="emojik" />
+                <img src="/assets/emoji.png" alt="123" className="emojik" />
                     <span>Панорамный бассейн</span>
                 </div>
                 <ul>
@@ -66,7 +65,7 @@ const FaqAbout = () => {
 
             <div className="FaqAbout_text_Sauna">
                 <div className="FaqAbout_sauna_title">
-                    <img src={sauna} alt="123" className="emojik" />
+                <img src="/assets/emoji.png" alt="123" className="emojik" />
                     <span>Эко-парк</span>
                 </div>
                 <ul>
@@ -76,7 +75,7 @@ const FaqAbout = () => {
 
             <div className="FaqAbout_text_Sauna">
                 <div className="FaqAbout_sauna_title">
-                    <img src={sauna} alt="123" className="emojik" />
+                <img src="/assets/emoji.png" alt="123" className="emojik" />
                     <span>Теннисный корт и многое другое</span>
                 </div>
                 <ul>
