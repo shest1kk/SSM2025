@@ -4,7 +4,7 @@
 
         '/assets/living.svg',
         '/assets/test.svg',
-        '/testimfonts.svg',
+        '/assets/testimfonts.svg',
         '/assets/hotel.jpg',
         '/assets/logo.png',
         '/assets/emoji.png'
