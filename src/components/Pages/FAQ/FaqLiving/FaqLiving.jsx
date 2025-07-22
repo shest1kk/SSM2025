@@ -231,19 +231,20 @@ const FaqLiving = () => {
         let found = false; // Флаг для проверки наличия результатов поиска
 
         rows.forEach(row => {
-            const names = row.cells[1].querySelectorAll('div');
-
-            names.forEach(nameDiv => {
-                const name = nameDiv.innerText;
-                if (name.toLowerCase().includes(searchQuery.toLowerCase())) {
-                    setHighlightedRow(row.getAttribute('data-id')); // Устанавливаем ID строки для подсветки
-                    setTimeout(() => {
-                        setHighlightedRow(null); // Через 3 секунды сбрасываем подсветку
-                    }, 3000);
-                    scrollToRow(row);
-                    found = true;
-                }
-            });
+            // Получаем текст из обеих ячеек
+            const name1 = row.cells[0]?.innerText || '';
+            const name2 = row.cells[1]?.innerText || '';
+            if (
+                name1.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                name2.toLowerCase().includes(searchQuery.toLowerCase())
+            ) {
+                setHighlightedRow(row.getAttribute('data-id')); // Устанавливаем ID строки для подсветки
+                setTimeout(() => {
+                    setHighlightedRow(null); // Через 3 секунды сбрасываем подсветку
+                }, 3000);
+                scrollToRow(row);
+                found = true;
+            }
         });
 
         setSearchQuery('');
@@ -335,21 +336,14 @@ const FaqLiving = () => {
                 <table>
                     <thead>
                         <tr>
-                            <th>Номер</th><th>Гость</th>
+                            <th>Гость 1</th><th>Гость 2</th>
                         </tr>
                     </thead>
                     <tbody>
                         {guestData.map((guest) => (
                             <tr key={guest.id} data-id={guest.id} className={highlightedRow == guest.id ? 'highlighted' : ''}>
-                                <td>{guest.id}</td>
-                                <td>
-                                    {guest.names.map((name, idx) => (
-                                        <React.Fragment key={idx}>
-                                            <div>{name}</div>
-                                            {idx !== guest.names.length - 1 && <div className="guest-divider"></div>}
-                                        </React.Fragment>
-                                    ))}
-                                </td>
+                                <td>{guest.names[0]}</td>
+                                <td>{guest.names[1]}</td>
                             </tr>
                         ))}
                     </tbody>
