@@ -2,7 +2,6 @@ import React from "react";
 import './FaqAbout.css';
 import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
-import logo from '../../../../assets/logo.png';
 import sauna from '../../../../assets/emoji.png'
 
 const FaqAbout = () => {
@@ -15,7 +14,7 @@ const FaqAbout = () => {
                     alt='123'/>
                 </div>
                 <img className={'FaqAbout_image_img'}
-                    src={logo}
+                    src="/assets/logo.png"
                     alt="123"
                 />
             </div>

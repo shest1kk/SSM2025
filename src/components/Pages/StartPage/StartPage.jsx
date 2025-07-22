@@ -38,7 +38,7 @@ const StartPage = () => {
                 
                 <img
                     className="StartPage_image_img"
-                    src={logo}
+                    src="/assets/logo.png"
                     alt="Логотип ЭйКей"
                 />
                 <div className='StartPage_image_asset_orange'>

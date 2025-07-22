@@ -16,7 +16,7 @@ const AllSection = () => {
                 
                 <img
                     className="categories_image_img"
-                    src={logo}
+                    src="/assets/logo.png"
                     alt="Логотип ЭйКей"
                 />
             </div>

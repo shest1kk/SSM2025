@@ -11,7 +11,7 @@ const FAQ = () => {
         <div className={'FAQ_wrapper'}>
         <div className={'FAQ_image'}>
         <img className={'Faq_image_img'}
-            src={logo}
+            src="/assets/logo.png"
             alt="123"
                 />
         </div>
@@ -28,8 +28,8 @@ const FAQ = () => {
             {/* <Link to='activnosti'>
             <Button className={'primary-button'}>Активности</Button>
             </Link> */}
-            <Link to='map'>
-            <Button className={'primary-button'}>Территория отеля</Button>
+            <Link to='#'>
+            <Button onClick={handleClick} className={'primary-button'}>Территория отеля</Button>
             </Link>
 
             <Link to='/sections'>

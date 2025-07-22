@@ -414,7 +414,7 @@ const FaqLiving = () => {
                          alt='123'/>
                 </div>
                 <img className={'FaqLiving_image_img'}
-                     src={logo}
+                     src="/assets/logo.png"
                      alt="123"/>
             </div>
             <div className={'FaqLiving_text'}>
@@ -433,32 +433,19 @@ const FaqLiving = () => {
                     </div>
                 </div>
                 {/* Блок с датами */}
-                <div style={{ display: 'flex', justifyContent: 'center', margin: '40px 0', fontSize: '20px', fontWeight: 'bold' }}>
-                    <div
+                <div className="FaqLiving_date-tabs">
+                    <button
+                        className={`date-tab-btn${selectedDate === '23' ? ' active' : ''}`}
                         onClick={() => setSelectedDate('23')}
-                        style={{
-                            cursor: 'pointer',
-                            padding: '10px 20px',
-                            borderBottom: selectedDate === '23' ? '2px solid #ed1c29' : '2px solid transparent',
-                            color: selectedDate === '23' ? '#ed1c29' : '#000',
-                            marginRight: '20px',
-                            transition: 'all 0.2s',
-                        }}
                     >
                         23 июля
-                    </div>
-                    <div
+                    </button>
+                    <button
+                        className={`date-tab-btn${selectedDate === '24' ? ' active' : ''}`}
                         onClick={() => setSelectedDate('24')}
-                        style={{
-                            cursor: 'pointer',
-                            padding: '10px 20px',
-                            borderBottom: selectedDate === '24' ? '2px solid #ed1c29' : '2px solid transparent',
-                            color: selectedDate === '24' ? '#ed1c29' : '#000',
-                            transition: 'all 0.2s',
-                        }}
                     >
                         24 июля
-                    </div>
+                    </button>
                 </div>
                 {selectedDate && (
                     <table>
