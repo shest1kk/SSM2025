@@ -3,6 +3,7 @@ import './FaqLiving.css';
 import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
 import { FaSearch } from 'react-icons/fa'; // Импортируем иконку поиска
+import logo from '../../../../assets/logo.png'
 
 const FaqLiving = () => {
     const [searchQuery, setSearchQuery] = useState('');
@@ -315,7 +316,7 @@ const FaqLiving = () => {
                          alt='123'/>
                 </div>
                 <img className={'FaqLiving_image_img'}
-                     src='/assets/logo.svg'
+                     src={logo}
                      alt="123"/>
             </div>
             <div className={'FaqLiving_text'}>

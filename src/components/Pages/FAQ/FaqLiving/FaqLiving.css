@@ -4,7 +4,7 @@
     align-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #EBEBE1;
+    background-color: #fff;
 }
 
 .FaqLiving_headerText {
@@ -19,13 +19,15 @@
     align-items: center;
     width: 100vw;
     height: 20vh;
-    background-color: #82D7E1;
+    background-color: #fff;
 }
 
 .FaqLiving_image_img {
-    height: 20vh;
+    height: 10vh;
     width: 30vw;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .FaqLiving_text {
@@ -37,7 +39,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
-    background-color: #EBEBE1;
+    background-color: #fff;
     width: 100vw;
 }
 
@@ -105,7 +107,7 @@
     margin-right: 10px;
     box-sizing: border-box;
     border-radius: 30px;
-    border-color: #82D7E1;
+    border-color: #ed1c29;
     height: 5vh;
     width: 42vh;
 }
@@ -134,7 +136,7 @@
 .scroll-to-top.show {
     opacity: 1;
     visibility: visible;
-    background-color: #82D7E1;
+    background-color: #ed1c29;
     border-radius: 25px;
     padding: 2px;
     display: flex;
@@ -162,7 +164,7 @@ tbody tr {
 }
 
 .guest-divider {
-    border-bottom: 1px solid #bdbdbd;
+    border-bottom: 1px solid #ed1c29;
     margin: 4px 0;
     width: 80%;
     margin-left: auto;
