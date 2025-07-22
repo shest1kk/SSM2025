@@ -2,7 +2,7 @@ import React from "react";
 import './AllSection.css';
 import Button from '../../Buttons/Button';
 import { Link } from "react-router-dom";
-import logo from '../../../assets/logo.svg'
+import logo from '../../../assets/logo.png'
 const tg = Telegram.WebApp
 
 

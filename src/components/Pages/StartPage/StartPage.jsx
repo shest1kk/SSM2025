@@ -4,7 +4,7 @@ import { useTelegram } from "../../../hooks/useTelegram";
 import Button from "../../Buttons/Button";
 import { Link } from "react-router-dom";
 
-import logo from '../../../assets/logo.svg'
+import logo from '../../../assets/logo.png'
 import logo_asset_green from '../../../assets/logo_asset_green.svg'
 import logo_asset_orange from '../../../assets/logo_asset_orange.svg'
 
@@ -28,13 +28,13 @@ const StartPage = () => {
     return (
         <div className="StartPage_wrapper">
             <div className="StartPage_image">
-            <div className='StartPage_image_asset_green'>
+            {/* <div className='StartPage_image_asset_green'>
                 <img
                     className="StartPage_image_img_asset_green"
                     src={logo_asset_orange}
                     alt="Логотип ЭйКей"
                 />
-                </div>
+                </div> */}
                 
                 <img
                     className="StartPage_image_img"
@@ -42,11 +42,11 @@ const StartPage = () => {
                     alt="Логотип ЭйКей"
                 />
                 <div className='StartPage_image_asset_orange'>
-                <img
+                {/* <img
                     className="StartPage_image_img_asset_orange"
                     src={logo_asset_green}
                     alt="Логотип ЭйКей"
-                />
+                /> */}
                 </div>
             </div>
             <div className="StartPage_text_wrapper">
@@ -55,7 +55,7 @@ const StartPage = () => {
                     {/* Спасибо, что были с нами! */}
                 </div>
                 <div className="StartPage_description">
-                    Здесь ты можешь узнать подробную информацию о мероприятии SSM2024
+                    Здесь ты можешь узнать подробную информацию о мероприятии SSM2025
                     <div className='StartPage_image_assets'>
                 </div>
                 </div>

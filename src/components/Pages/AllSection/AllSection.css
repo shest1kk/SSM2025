@@ -7,6 +7,7 @@
     font-size: 22px;
     color: #000;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .categories_wrapper {
@@ -48,6 +49,6 @@
 }
 
 .categories_image_img {
-    height: 30vh;
-    width: 60%;
+    height: 20vh;
+    width: 100%;
 }

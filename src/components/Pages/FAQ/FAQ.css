@@ -14,8 +14,8 @@
 }
 
 .Faq_image_img {
-    height: 30vh;
-    width: 60%;
+    height: 20vh;
+    width: 100%;
 }
 
 .FAQ_text {
@@ -26,6 +26,7 @@
     font-style: normal;
     font-size: 22px;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 .FAQ_categories button {
