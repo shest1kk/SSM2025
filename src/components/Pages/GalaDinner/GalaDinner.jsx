@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const GalaDinner = () => {
     const [showDresscodeModal, setShowDresscodeModal] = useState(false);
     const [showTimingModal, setShowTimingModal] = useState(false);
+    const [showSeatingModal, setShowSeatingModal] = useState(false);
 
     const handleDresscodeClick = () => {
         setShowDresscodeModal(true);
@@ -12,11 +13,17 @@ const GalaDinner = () => {
     const handleTimingClick = () => {
         setShowTimingModal(true);
     };
+    const handleSeatingClick = () => {
+        setShowSeatingModal(true);
+    };
     const closeDresscodeModal = () => {
         setShowDresscodeModal(false);
     };
     const closeTimingModal = () => {
         setShowTimingModal(false);
+    };
+    const closeSeatingModal = () => {
+        setShowSeatingModal(false);
     };
 
     return (
@@ -135,6 +142,57 @@ const GalaDinner = () => {
                                 cursor: 'pointer'
                             }}
                             onClick={closeTimingModal}
+                        >
+                            Закрыть
+                        </button>
+                    </div>
+                </div>
+            )}
+            <Button onClick={handleSeatingClick} className={'primary-button'}>Рассадка</Button>
+            {/* Модалка с картинкой для рассадки */}
+            {showSeatingModal && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.5)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 9999
+                }}
+                onClick={closeSeatingModal}
+                >
+                    <div style={{
+                        background: '#fff',
+                        borderRadius: '12px',
+                        padding: '20px',
+                        boxShadow: '0 2px 16px rgba(0,0,0,0.2)',
+                        maxWidth: '90vw',
+                        maxHeight: '80vh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                    }}
+                    onClick={e => e.stopPropagation()}
+                    >
+                        <img
+                            src="/assets/gala-dinner-seat.png"
+                            alt="Рассадка"
+                            style={{maxWidth: '80vw', maxHeight: '60vh', borderRadius: '8px'}}
+                        />
+                        <button
+                            style={{
+                                marginTop: '16px',
+                                padding: '8px 24px',
+                                borderRadius: '8px',
+                                border: 'none',
+                                background: '#ed1c29',
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                fontSize: '16px',
+                                cursor: 'pointer'
+                            }}
+                            onClick={closeSeatingModal}
                         >
                             Закрыть
                         </button>

@@ -9,6 +9,7 @@
         '/assets/logo.png',
         '/assets/emoji.png',
         '/assets/dresscode.jpg',
+        '/assets/gala-dinner-seat.png',
 
         // Добавьте остальные URL-адреса изображений
     ];
