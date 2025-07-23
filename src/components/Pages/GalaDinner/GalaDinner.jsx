@@ -1,22 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import './GalaDinner.css';
 import Button from '../../Buttons/Button';
 import { Link } from "react-router-dom";
 const GalaDinner = () => {
-    const handleClick = () => {
-        alert('Скоро будет');
+    const [showDresscodeModal, setShowDresscodeModal] = useState(false);
+    const [showTimingModal, setShowTimingModal] = useState(false);
+
+    const handleDresscodeClick = () => {
+        setShowDresscodeModal(true);
     };
-    const whereClick = () => {
-        alert('Речной павильон\n(на карте номер 50)');
+    const handleTimingClick = () => {
+        setShowTimingModal(true);
     };
-    const timingClick = () => {
-        alert('Встреча гостей с 19:00\nСтарт гала-ужина в 19:30');
+    const closeDresscodeModal = () => {
+        setShowDresscodeModal(false);
     };
+    const closeTimingModal = () => {
+        setShowTimingModal(false);
+    };
+
     return (
         <div className={'GalaDinner_wrapper'}>
             <div className={'GalaDinner_image'}>
             <img className={'GalaDinner_image_img'}
-            src='/assets/logo.svg'
+            src='/assets/logo.png'
             alt="123"
                 />
             </div>
@@ -24,21 +31,120 @@ const GalaDinner = () => {
             <span>Гала-ужин</span>
         </div>
         <div className={'GalaDinner_categories'}>
-            <Link to="dresscode">
-            <Button className={'primary-button'}>Дресс-код</Button>
-            </Link>
-            {/* <Link to='timing'> */}
-            <Button onClick={timingClick}className={'primary-button'}>Тайминги</Button>
-            {/* </Link> */}
-            <Link to='/gala/sit'>
-            <Button className={'primary-button'}>Рассадка</Button>
-            </Link>
-            <Link to='/gala/map'>
-            <Button onClick={whereClick} className={'primary-button'}>Где находится</Button>
-            </Link>
+
+            <Button onClick={handleDresscodeClick} className={'primary-button'}>Дресс-код</Button>
+
+            {/* Модалка с картинкой для дресс-кода */}
+            {showDresscodeModal && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.5)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 9999
+                }}
+                onClick={closeDresscodeModal}
+                >
+                    <div style={{
+                        background: '#fff',
+                        borderRadius: '12px',
+                        padding: '20px',
+                        boxShadow: '0 2px 16px rgba(0,0,0,0.2)',
+                        maxWidth: '90vw',
+                        maxHeight: '80vh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center'
+                    }}
+                    onClick={e => e.stopPropagation()}
+                    >
+                        <img
+                            src="/assets/dresscode.jpg"
+                            alt="Дресс-код"
+                            style={{maxWidth: '80vw', maxHeight: '60vh', borderRadius: '8px'}}
+                        />
+                        <button
+                            style={{
+                                marginTop: '16px',
+                                padding: '8px 24px',
+                                borderRadius: '8px',
+                                border: 'none',
+                                background: '#ed1c29',
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                fontSize: '16px',
+                                cursor: 'pointer'
+                            }}
+                            onClick={closeDresscodeModal}
+                        >
+                            Закрыть
+                        </button>
+                    </div>
+                </div>
+            )}
+
+            <Button onClick={handleTimingClick} className={'primary-button'}>Тайминги</Button>
+            {/* Модалка с картинкой для таймингов */}
+            {showTimingModal && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.5)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 9999
+                }}
+                onClick={closeTimingModal}
+                >
+                    <div style={{
+                        background: '#fff',
+                        borderRadius: '12px',
+                        padding: '20px',
+                        boxShadow: '0 2px 16px rgba(0,0,0,0.2)',
+                        maxWidth: '90vw',
+                        maxHeight: '80vh',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        fontFamily: 'Montserrat'
+                    }}
+                    onClick={e => e.stopPropagation()}
+                    >
+                        <div style={{textAlign: 'center'}}>
+                            <div style={{fontSize: '20px', fontWeight: 'bold'}}>19:30 Welcome</div>
+                            <hr style={{width: '100%', border: 'none', borderTop: '1px solid #eee', margin: '8px 0'}} />
+                            <div style={{fontSize: '20px', fontWeight: 'bold'}}>20:00 Начало</div>
+                            <hr style={{width: '100%', border: 'none', borderTop: '1px solid #eee', margin: '8px 0'}} />
+                            <div style={{fontSize: '20px', fontWeight: 'bold'}}>23:30 Переход в клуб "Куршавель"</div>
+                            <hr style={{width: '100%', border: 'none', borderTop: '1px solid #eee', margin: '8px 0'}} />
+                            <div style={{fontSize: '20px', fontWeight: 'bold'}}>04:00 Конец</div>
+                        </div>
+                        <button
+                            style={{
+                                marginTop: '16px',
+                                padding: '8px 24px',
+                                borderRadius: '8px',
+                                border: 'none',
+                                background: '#ed1c29',
+                                color: '#fff',
+                                fontWeight: 'bold',
+                                fontSize: '16px',
+                                cursor: 'pointer'
+                            }}
+                            onClick={closeTimingModal}
+                        >
+                            Закрыть
+                        </button>
+                    </div>
+                </div>
+            )}
             <Link to='/sections'>
             <Button className={'primary-button'}>Назад</Button>
             </Link>
+            
         </div>
         </div>
     );

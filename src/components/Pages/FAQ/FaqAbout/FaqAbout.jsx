@@ -76,10 +76,14 @@ const FaqAbout = () => {
             <div className="FaqAbout_text_Sauna">
                 <div className="FaqAbout_sauna_title">
                 <img src="/assets/emoji.png" alt="123" className="emojik" />
-                    <span>Теннисный корт и многое другое</span>
+                    Теннисный корт,<br/>
+                    футбольная площадка и многое другое
                 </div>
                 <ul>
                     <li>Каждый сможет найти активности себе по душе</li>
+                    <li>Футбольная площадка будет доступна 25 июля</li>
+                    <span className={'details'}>10:00 - 13:00</span>
+                    
                 </ul>
             </div>
 
