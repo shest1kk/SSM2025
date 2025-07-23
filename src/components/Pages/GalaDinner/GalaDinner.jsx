@@ -67,13 +67,11 @@ const GalaDinner = () => {
                     }}
                     onClick={e => e.stopPropagation()}
                     >
-                        <a href="/assets/dresscode.jpg" target="_blank" rel="noopener noreferrer">
                         <img
                             src="/assets/dresscode.jpg"
                             alt="Дресс-код"
                             style={{maxWidth: '80vw', maxHeight: '60vh', borderRadius: '8px'}}
                         />
-                        </a>
                         <button
                             style={{
                                 marginTop: '16px',
@@ -177,13 +175,11 @@ const GalaDinner = () => {
                     }}
                     onClick={e => e.stopPropagation()}
                     >
-                        <a href="/assets/gala-dinner-seat.png" target="_blank" rel="noopener noreferrer">
                         <img
                             src="/assets/gala-dinner-seat.png"
                             alt="Рассадка"
                             style={{maxWidth: '80vw', maxHeight: '60vh', borderRadius: '8px'}}
                         />
-                        </a>
                         <button
                             style={{
                                 marginTop: '16px',
