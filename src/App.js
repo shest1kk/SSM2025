@@ -1,4 +1,5 @@
 import './App.css';
+import { Analytics } from "@vercel/analytics/react"
 import { useTelegram } from './hooks/useTelegram';
 import { useEffect } from 'react';
 
