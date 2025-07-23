@@ -20,7 +20,6 @@ import MeetupSpeakers from '../components/Pages/Meetup/MeetupSpeakers/MeetupSpea
 import MeetupTiming from '../components/Pages/Meetup/MeetupTiming/MeetupTiming';
 import Feedback from '../components/Pages/Feedback/Feedback';
 import React from 'react';
-import { Analytics } from "@vercel/analytics/react"
 
 const AppRoutes = () => {
     return (
@@ -46,7 +45,6 @@ const AppRoutes = () => {
           <Route path="/meetup/timing" element={<MeetupTimingWithAnimation />} />
           <Route path="/feedback" element={<FeedbackWithAnimation />} />
         </Routes>
-        <Analytics />
       </Router>
     );
   }
