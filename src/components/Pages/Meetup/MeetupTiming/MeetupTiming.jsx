@@ -448,7 +448,7 @@ const MeetupTiming = () => {
       </div> */}
       <div className={"MeetupTiming_text"}>
         <span style={{fontWeight: 'bold', fontSize: '20px', marginBottom: '20px', marginTop: '20px', display: 'block'}}>Тайминги</span>
-        <div className="MeetupTiming_table">
+        <div className="MeetupTiming_table table-responsive">
             <table>
               <thead>
                 <tr>

@@ -332,3 +332,8 @@ table {
 .bottom-spacer {
     height: 80px; /* Достаточный отступ для кнопки */
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
