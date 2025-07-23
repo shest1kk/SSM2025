@@ -4,29 +4,29 @@ import Button from '../../../Buttons/Button';
 import { Link } from "react-router-dom";
 
 const zones = [
-    { name: "123", top: "20%", left: "19%" },
-    { name: "", description: "", top: "12%", left: "22%" },
-    { name: "", description: "", top: "16%", left: "30%" },
-    { name: "", description: "", top: "18%", left: "38%" },
-    { name: "", description: "", top: "20%", left: "45%" },
-    { name: "", description: "", top: "22%", left: "53%" },
-    { name: "", description: "", top: "25%", left: "60%" },
-    { name: "", description: "", top: "28%", left: "68%" },
-    { name: "", description: "", top: "32%", left: "75%" },
-    { name: "", description: "", top: "36%", left: "82%" },
-    { name: "", description: "", top: "40%", left: "88%" },
-    { name: "", description: "", top: "45%", left: "92%" },
-    { name: "", description: "", top: "50%", left: "85%" },
-    { name: "", description: "", top: "55%", left: "78%" },
-    { name: "", description: "", top: "60%", left: "70%" },
-    { name: "", description: "", top: "65%", left: "62%" },
-    { name: "", description: "", top: "70%", left: "54%" },
-    { name: "", description: "", top: "75%", left: "46%" },
-    { name: "", description: "", top: "80%", left: "38%" },
-    { name: "", description: "", top: "85%", left: "30%" },
-    { name: "", description: "", top: "90%", left: "22%" },
-    { name: "", description: "", top: "95%", left: "15%" },
-    { name: "", description: "", top: "98%", left: "8%" },
+    // { name: "123", top: "20%", left: "19%" },
+    // { name: "", description: "", top: "12%", left: "22%" },
+    // { name: "", description: "", top: "16%", left: "30%" },
+    { name: "Спортивные площадки", description: "", top: "13%", left: "34%" },
+    { name: 'СПА-центр "Каринтия"', description: "", top: "20%", left: "44%" },
+    { name: 'Клуб "Куршевель"', description: "", top: "38%", left: "53%" },
+    { name: "Главный вход/Респешн", description: "", top: "40%", left: "57%" },
+    { name: 'Конференц-зал "Дунай"', description: "", top: "37%", left: "62%" },
+    // { name: "", description: "", top: "32%", left: "75%" },
+    // { name: "", description: "", top: "36%", left: "82%" },
+    { name: "Шатер", description: "", top: "49%", left: "89%" },
+    { name: "Парковка", description: "", top: "64%", left: "92%" },
+    // { name: "", description: "", top: "50%", left: "85%" },
+    { name: "КПП-1", description: "", top: "82%", left: "82%" },
+    // { name: "", description: "", top: "60%", left: "70%" },
+    // { name: "", description: "", top: "65%", left: "62%" },
+    // { name: "", description: "", top: "70%", left: "54%" },
+    // { name: "", description: "", top: "75%", left: "46%" },
+    // { name: "", description: "", top: "80%", left: "38%" },
+    // { name: "", description: "", top: "85%", left: "30%" },
+    // { name: "", description: "", top: "90%", left: "22%" },
+    // { name: "", description: "", top: "95%", left: "15%" },
+    // { name: "", description: "", top: "98%", left: "8%" },
   ];
 
 const FaqMap = () => {
@@ -68,7 +68,7 @@ const FaqMap = () => {
                           // minHeight: 20,
                           // maxWidth: 40,
                           // maxHeight: 40,
-                          fontSize: '1.2vw',
+                          fontSize: '18px',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
@@ -99,13 +99,13 @@ const FaqMap = () => {
                           background: '#fff',
                           border: '1px solid #ed1c29',
                           borderRadius: 12,
-                          padding: '16px 20px',
+                          padding: '4px 8px',
                           zIndex: 10,
-                          minWidth: 180,
+                          // minWidth: 180,
                           boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
                         }}
                       >
-                        <div style={{ fontWeight: 'bold', marginBottom: 6 }}>{activeZone.name}</div>
+                        <div style={{ fontWeight: '500', fontFamily: "Montserrat", fontSize: "8px" }}>{activeZone.name}</div>
                         <div>{activeZone.description}</div>
                       </div>
                     )}
