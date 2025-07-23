@@ -5,13 +5,12 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const MeetupTiming = () => {
-    const [currentDay, setCurrentDay] = useState(1);
-    const [modalData, setModalData] = useState(null);
+    // Удаляем состояние currentDay и связанные с ним переменные
+    // const [currentDay, setCurrentDay] = useState(1);
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const bottomSpacerRef = useRef(null);
     const [isSticky, setIsSticky] = useState(true);
     const [showBackButton, setShowBackButton] = useState(true); // Button visibility state
-    const [isModalOpen, setIsModalOpen] = useState(false); // New state for modal visibility
   
     const handleScroll = () => {
       const rows = document.querySelectorAll('tbody tr');
@@ -48,277 +47,147 @@ const MeetupTiming = () => {
   
 
     useEffect(() => {
-        alert('Чтобы узнать подробнее про спикеров - просто нажмите на них :)');
+        // alert('Чтобы узнать подробнее про спикеров - просто нажмите на них :)');
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
       }, []);
 
-  const timingDataDay1 = [
+  const timingData = [
     {
       id: 1,
-      time: "14:30",
+      time: "10:30",
       topic:
-        "\nИнтро<hr>Почему Эй Кей лучше, чем другие.<hr>Чем похожи <u>ЭЙ</u> Кей и <u>ЭЙ</u>нштейн?\n\n",
+        "\nВстреча участников конференции<hr>Кофе-брейк\n\n",
       speakers: [
-        { id: 101, name: "\nЧижов Алексей\n\n" },
-        { id: 102, name: "\nТкачева Светлана\n\n" },
+        { id: 101, name: "\n\n" },
       ],
     },
     {
       id: 2,
-      time: "15:00",
+      time: "11:00",
       topic:
-        "\nPROMO - Как расти дальше?<hr>Простых решений больше нет.<hr>БОНУС\n↓↓↓\n\nФин Дир расскажет, куда тратятся деньги, которые мы зарабатываем.\n\n",
+        "\nINTRO<hr>Почему трансформация\n\n",
       speakers: [
-        { id: 103, name: "\nАнтипанова Серафима\n\n" },
-        { id: 104, name: "\nКудряшов Дмитрий\n\n" },
+        { id: 103, name: "\n" },
       ],
     },
     {
       id: 3,
-      time: "15:30",
-      topic: "Перерыв",
-      speakers: [],
+      time: "11:05",
+      topic: "\nИтоги полугодия<hr>Реализация стратегии 2025\n\n",
+      speakers: [
+        {id: 103, name:"Кудряшов Дмитрий"}
+      ],
     },
     {
         id: 4,
-        time: "15:35",
-        topic: "\nВыступление Маркета Сушко.\n\nСоздаем возможности сами!\n\n",
+        time: "11:25",
+        topic: "\nТрансформация OPS\n\n",
         speakers: [
-            { id: 105, name: "Сушко Павел"}
+            { id: 105, name: "Ткачева Светлана"}
         ],
       },
       {
         id: 5,
-        time: "15:45",
-        topic: "\nТиньков, мат и вера в себя.<hr>Как успешно пройти ассес-\nмент на ТУ не с первого раза.\n\n",
+        time: "",
+        topic: "Place",
         speakers: [
-            { id: 106, name: "Железова Людмила"}
+            { id: 106, name: "Щукин Александр"}
         ],
       },
       {
         id: 6,
-        time: "16:05",
-        topic: "\nНевероятная Астрахань: как все время расти в ТО против тренда.\n\n",
+        time: "",
+        topic: "Promo",
         speakers: [
-            { id: 107, name: "\nЛепская Екатерина\n\n"},
-            { id: 108, name: "\nБолдырева Алия\n\n"}
+            { id: 107, name: "Корнеева Елена"},
         ],
       },
       {
         id: 7,
-        time: "16:25",
-        topic: "\nКак небольшие и простые идеи могут давать хороший результат.<hr>Делай, что можешь, для своих людей.<hr>Укрепление HR бренда в г. Рязань.\n\n",
+        time: "",
+        topic: "Product",
         speakers: [
-            { id: 109, name: "\nМария Прокофьева\n\n"},
-            { id: 110, name: "\nМихеева Елена\n\n"}
+            { id: 109, name: "Горельков Александр"},
         ],
       },
       {
         id: 8,
-        time: "16:50",
-        topic: "\nЗаложи базу. Потом - выжимай максимум.<hr>Как ставить рекорды по выручке.\n\n",
+        time: "",
+        topic: "People",
         speakers: [
-            { id: 111, name: "Хромов Роман"},
+            { id: 111, name: "Григорян Наталья"},
         ],
       },
       {
         id: 9,
-        time: "17:15",
-        topic: "\nУспешные практики в г. Ярославль.\n\n",
+        time: "",
+        topic: "Проекты",
         speakers: [
-            { id: 112, name: "\nВиноградова Валентина\n\n"},
-            { id: 113, name: "\nБаранов Иван\n\n"}
+            { id: 112, name: "Виноградова Екатерина"},
         ],
       },
       {
         id: 10,
-        time: "17:40",
-        topic: "\nПерерыв\n\n",
+        time: "12:45",
+        topic: "QA",
         speakers: [
-            
-        ],
+          { name: "\nЕвдокимов Илья"},
+          {name: "Вишняков Антон\n\n"}
+      ],
       },
       {
         id: 11,
-        time: "17:55",
-        topic: "\nЛивы и газели.\nОхота как стиль жизни и работы.<hr>Как можно выполнить план по ТО.\n\n",
+        time: "13:00",
+        topic: "Перерыв",
         speakers: [
-            { id: 114, name: "Ткачева Светлана"}
         ],
       },
       {
         id: 12,
-        time: "18:25",
-        topic: "\nНовые технологии стремительно меняют мир.<hr>То, что казалось нереальным - уже в Эй Кей.\n\n",
+        time: "13:15",
+        topic: "Трансформация 2025",
         speakers: [
-            { id: 115, name: "Кунаков Иван"}
+            { id: 115, name: "Низамутдинова Нелли"}
         ],
       },
       {
         id: 13,
-        time: "19:10",
-        topic: "\nОкончание 1го дня конференции.\n\n",
-        speakers: [
-            
-        ],
-      },
-    // Add more entries as needed
-  ];
-
-  const timingDataDay2 = [
-    {
-      id: 14,
-      time: "10:00",
-      topic: "HR  + People.",
-      speakers: [
-        { id: 116, name: "\nHR\n\n" },
-        { id: 117, name: "\nГригорян Наталья\n\n"}
-      ],
-    },
-    {
-      id: 15,
-      time: "11:30",
-      topic: "Перерыв",
-      speakers: [],
-    },
-    {
-      id: 16,
-      time: "11:40",
-      topic: "Квиз",
-      speakers: [],
-    },
-    {
-        id: 17,
-        time: "11:55",
-        topic: "\nВступление маркета Кравченко.\nВопреки…\n\n",
-        speakers: [
-            { id: 118, name: "\nКравченко Ксения\n\n" },
-        ],
-      },
-      {
-        id: 18,
-        time: "12:05",
-        topic: "\nВопреки внешним обстоятельств.\n\n",
-        speakers: [
-            { id: 119, name: "\nЕгоров Александр" },
-            { id: 120, name: "\nДёмин Владислав" },
-            { id: 121, name: "\nФионина Ольга\n\n" },
-        ],
-      },
-      {
-        id: 19,
-        time: "12:25",
-        topic: "\nВопреки рынку труда.\n\n",
-        speakers: [
-            { id: 122, name: "\nБурыкина Анастасия\n\n" },
-            { id: 123, name: "\nЮдин Сергей\n\n" },
-            { id: 124, name: "\nПодлегаева Дарья\n\n" },
-            { id: 125, name: "\nЛеваков Александр\n\n"}
-        ],
-      },
-      {
-        id: 20,
-        time: "12:55",
-        topic: "\nВопреки комфорту\n\n<hr>\nЛичная история развития от Директора до ВТУ.\n\n",
-        speakers: [
-            { id: 126, name: "\nМальцева Ирина\n\n" },
-        ],
-      },
-      {
-        id: 21,
-        time: "13:10",
-        topic: "\nВопрекия установкам.<hr>Аналитика в Product.\n\n",
-        speakers: [
-            { id: 127, name: "\nГорельков Александр\n\n" },
-        ],
-      },
-      {
-        id: 22,
-        time: "13:25",
-        topic: "\nВопреки ручного труда<hr>Автоматизация профиля ресторана.\n\n",
-        speakers: [
-            { id: 128, name: "\nКававина Любовь\n\n" },
-        ],
-      },
-      {
-        id: 23,
         time: "13:40",
-        topic: "\nОбед\n\n",
+        topic: "Цели 2ого полугодия",
         speakers: [
-
+            {name: "LT"}
         ],
       },
       {
-        id: 24,
-        time: "14:40",
-        topic: "\nКак я нахожу себе проблемы и решаю их на пользу всем. :)<hr>Сломанные преграды в доставке и COL.\n\n",
+        id: 14,
+        time: "14:05",
+        topic: "Обед",
         speakers: [
-            { id: 129, name: "\nВиноградова Екатерина\n\n" },
+            {name: ""}
         ],
       },
       {
-        id: 25,
-        time: "15:00",
-        topic: "\nКак закалялся QA.\n\n",
+        id: 15,
+        time: "14:50",
+        topic: "Деловая игра",
         speakers: [
-            { id: 130, name: "\nЕвдокимов Илья\n\n" },
-            { id: 131, name: "\nВишняков Антон\n\n" },
+            {name: ""}
         ],
       },
       {
-        id: 26,
-        time: "15:30",
-        topic: "\nКак у меня дела?\n\n",
+        id: 16,
+        time: "17:35",
+        topic: "Заселение",
         speakers: [
-            { id: 132, name: "\nФедорова Татьяна\n\n" },
+            {name: ""}
         ],
       },
-      {
-        id: 27,
-        time: "15:50",
-        topic: "\nБудущее Эй Кей.<hr>Хотим менять, а не меняться.\n\n",
-        speakers: [
-            { id: 133, name: "\nЧижов Алексей\n\n" },
-        ],
-      },
-      {
-        id: 28,
-        time: "16:50",
-        topic: "\nПерерыв\n\n",
-        speakers: [
-
-        ],
-      },
-      {
-        id: 29,
-        time: "17:00",
-        topic: "\nПанельная дискуссия\n\n",
-        speakers: [
-            {id: 134, name: "LT"}
-        ],
-      },
-      {
-        id: 30,
-        time: "17:30",
-        topic: "\nОкончание конференции\n\n",
-        speakers: [
-
-        ],
-      },
-      {
-        id: 31,
-        time: "19:30",
-        topic: "\nГала-ужин\n\n",
-        speakers: [
-
-        ],
-      },
-
     // Add more entries as needed
   ];
+  ;
 
   const speakersData = {
     101: {
@@ -522,30 +391,6 @@ const MeetupTiming = () => {
     // Add more entries as needed
   };
 
-  const openModal = (speakerId) => {
-    if (speakersData.hasOwnProperty(speakerId)) {
-      setModalData(speakersData[speakerId]);
-      setShowBackButton(false);
-      setShowScrollToTop(false); // Hide "Back" button when modal is opened
-    } else {
-      console.error(`Speaker with id ${speakerId} not found in speakersData`);
-    }
-  };
-
-  const closeModal = () => {
-
-    // Add a delay to ensure fadeOut animation completes before resetting modalData
-    setTimeout(() => {
-      setModalData(null);
-      setShowBackButton(true); // Show "Back" button when modal is closed
-    }, 700); // Match animation duration in milliseconds
-
-    // Add fadeOut class to initiate fadeOut animation
-    const modalOverlay = document.querySelector(".modal-overlay");
-    if (modalOverlay) {
-      modalOverlay.classList.add("fadeOut");
-    }
-  };
   const formatText = (text) => {
     return text.replace(/\n/g, "<br/>").replace(/<hr>/g, "<hr>");
   };
@@ -556,10 +401,10 @@ const MeetupTiming = () => {
         {index > 0 && <hr />}
         <div
           dangerouslySetInnerHTML={{ __html: formatText(speaker.name) }}
-          onClick={(e) => {
-            e.preventDefault();
-            openModal(speaker.id);
-          }}
+          // onClick={(e) => {
+          //   e.preventDefault();
+          //   openModal(speaker.id);
+          // }}
         >
         </div>
       </React.Fragment>
@@ -573,29 +418,20 @@ const MeetupTiming = () => {
   };
 
 
-  let timingData;
-  let dateLabel;
-  if (currentDay === 1) {
-    timingData = timingDataDay1;
-    dateLabel = "22.07";
-  } else if (currentDay === 2) {
-    timingData = timingDataDay2;
-    dateLabel = "23.07";
-  } else {
-    // Handle other days if needed
-  }
+  // let timingData;
+  // let dateLabel;
+  // if (currentDay === 1) {
+  //   timingData = timingDataDay1;
+  //   dateLabel = "22.07";
+  // } else if (currentDay === 2) {
+  //   timingData = timingDataDay2;
+  //   dateLabel = "23.07";
+  // } else {
+  //   // Handle other days if needed
+  // }
 
   return (
     <div className={"MeetupTiming_wrapper"}>
-      {modalData && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className={'modal-image'}><img className={'modal-image-img'} src={modalData.image} alt='123'/></div>
-            <div className={'modal-text'} dangerouslySetInnerHTML={{ __html: modalData.text.replace(/\n/g, '<br/>') }}></div>
-            <div className={'modal-close'}><button onClick={closeModal}>Назад</button></div>
-          </div>
-        </div>
-      )}
       {/* <div className={"MeetupTiming_image"}>
         <div className={"MeetupTiming_headerText"}>
           <img
@@ -611,23 +447,8 @@ const MeetupTiming = () => {
         />
       </div> */}
       <div className={"MeetupTiming_text"}>
-        <div className="slider">
-          {currentDay > 1 && (
-            <button onClick={() => setCurrentDay(currentDay - 1)}>
-              <FaArrowLeft /> {currentDay === 2 ? "" : ""}
-            </button>
-          )}
-          <span>{dateLabel}</span>
-          {currentDay < 3 && (
-            <button onClick={() => setCurrentDay(currentDay + 1)}>
-              {currentDay === 2 ? "" : ""} <FaArrowRight />
-            </button>
-          )}
-        </div>
-        {currentDay === 3 ? (
-          <div className="departure-note">ВЫЕЗД ДО 12:00</div>
-        ) : (
-          <div className="MeetupTiming_table">
+        <span style={{fontWeight: 'bold', fontSize: '20px', marginBottom: '20px', marginTop: '20px', display: 'block'}}>Тайминги</span>
+        <div className="MeetupTiming_table">
             <table>
               <thead>
                 <tr>
@@ -647,21 +468,20 @@ const MeetupTiming = () => {
               </tbody>
             </table>
           </div>
-        )}
-        <div className={`scroll-to-top ${showScrollToTop ? 'show' : ''}`} onClick={scrollToTop}>
-                    <img src="/assets/arrow-up.svg" alt="Scroll to Top" />
-                </div>
-        <div className={isSticky ? 'sticky-button' : 'normal-button'}>
-                    {showBackButton && (
-                        <Link to='/meetup'>
-                            <Button className={'primary-button'}>Назад</Button>
-                        </Link>
-                    )}
-                </div>
-                <div className="bottom-spacer" ref={bottomSpacerRef}></div>
-            </div>
+          <div className={`scroll-to-top ${showScrollToTop ? 'show' : ''}`} onClick={scrollToTop}>
+            <img src="/assets/arrow-up.svg" alt="Scroll to Top" />
+          </div>
+          <div className={isSticky ? 'sticky-button' : 'normal-button'}>
+            {showBackButton && (
+              <Link to='/meetup'>
+                <Button className={'primary-button'}>Назад</Button>
+              </Link>
+            )}
+          </div>
+          <div className="bottom-spacer" ref={bottomSpacerRef}></div>
+        </div>
       </div>
-  );
+    );
 };
 
 export default MeetupTiming;

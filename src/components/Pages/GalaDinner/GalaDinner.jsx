@@ -146,6 +146,11 @@ const GalaDinner = () => {
             </Link>
             
         </div>
+        <div className="powered_by">
+                <a href="https://t.me/imdbll" target="_blank" rel="noopener noreferrer">
+                    powered by @imdbll
+                </a>
+            </div>
         </div>
     );
 };

@@ -1,35 +1,4 @@
-/* .MeetupTiming_wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80vw;
-}
 
-.MeetupTiming_image {
-    width: 80vw;
-    margin-bottom: 20px;
-}
-
-.MeetupTiming_image_img {
-    height: 50vh;
-    width: 100%;
-}
-
-.MeetupTiming_text {
-    color: #fff;
-    text-align: justify;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 18px;
-    margin-bottom: 20px;
-} */
-
-
-.modal-close button {
-
-}
 
 .MeetupTiming_wrapper {
     display: flex;
@@ -37,7 +6,7 @@
     align-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: #EBEBE1;
+    background-color: #fff;
 }
 
 .MeetupTiming_headerText {
@@ -70,7 +39,7 @@
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 18px;
-    background-color: #EBEBE1;
+    background-color: #fff;
     width: 100vw;
 }
 
